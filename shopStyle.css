@@ -21,12 +21,12 @@ p {
 }
 
 .shopSlider {
-    width: 60%;
+    width: 74.5%;
     margin: auto;
     padding: 1rem;
-    overflow: hidden;
-    border: 1px solid black;
-    border-radius: 10px;
+    overflow: cover;
+    border: 0.0625rem solid black;
+    border-radius: 0.3rem;
 }
 
 .shopSliderTrack {
@@ -37,16 +37,29 @@ p {
 }
 
 .shopSlide {
-    flex: 0 0 25%;
+    flex: 0 0 27vh;
     scroll-snap-align: start;
-    border-radius: 10px;
+    padding: 0.25rem;
+    border-radius: 0.3rem;
+    border: 0.09375rem solid black;
+    margin: 0.2rem;
+    max-width: 16.9rem;
+    background-color: #f2cf2a;
 }
+
+img {
+    background-color: #ffffff;
+}
+
+.shopAddToCart {}
 
 .shopSlide img {
     width: 100%;
-    height: 100%;
+    height: 75%;
     display: block;
     user-select: none;
+    border: 0.09375rem solid black;
+    border-radius: 0.3rem;
 }
 
 h2 {
