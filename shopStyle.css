@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+h1 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+
+.shopSlider {
+    width: 60%;
+    margin: auto;
+    padding: 1rem;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.shopSliderTrack {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.shopSlide {
+    flex: 0 0 25%;
+    scroll-snap-align: start;
+}
+
+.shopSlide img {
+    width: 100%;
+    display: block;
+    user-select: none;
+}
+
+h2 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
