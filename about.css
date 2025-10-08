@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+}
+
+body {
+    padding: 20px 80px;
+
+
+    .abouttitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px 0 120px 0;
+
+        h1 {
+            font-family: "Montserrat", sans-serif;
+            color: #1d68b4;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 0.8s ease;
+        }
+
+        h2 {
+            font-family: "Roboto", sans-serif;
+            font-size: 1.5em;
+            animation: fadeInDown 1s ease;
+        }
+    }
+
+    .aboutArticles {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 40px;
+        width: 80%;
+        padding-left: 100px;
+
+
+        .member-card {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+
+            .member-avatar {
+                width: 15%;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: #e9ecef;
+                border-radius: 20px;
+                padding: 5px;
+                gap: 25px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                position: relative;
+
+                .avatar-container {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: #e9ecef;
+                    padding: 5px;
+
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center 10%;
+                        display: block;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            p {
+                width: 50%;
+                font-family: "Roboto", sans-serif;
+            }
+
+            h3 {
+                font-family: "Roboto", sans-serif;
+            }
+        }
+    }
+}
