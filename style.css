@@ -1,7 +1,187 @@
-* {
-    margin: 0;
-    padding: 0;
-    box- sizing: border - box;
+.montserrat-alternates-regular {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-body {}
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+
+
+.banniere {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    background-color: white;
+}
+
+.slogan {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 70px;
+    text-shadow: grey 2px 2px;
+    text-align: center;
+    padding: 75px 0px 50px 0px;
+}
+
+.presentation {
+    background-image: url(videos/yellow-lego-inspired-background.jpg);
+    background-position: center;
+    box-shadow: 10px 5px 5px grey;
+    width: 1000px;
+    height: 550px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.textpresentation {
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.textpres1 {
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    width: 500px;
+    height: 380px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-content: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.textpres2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    color: #bd190d;
+    text-shadow: #460707 2px 2px 0;
+    height: 300px;
+    margin: 0;
+    text-transform: capitalize;
+
+}
+
+.textpres1 p {
+    display: block;
+}
+
+.textpres2 p {
+    margin: 0;
+}
+
+.arrowbottom {
+    width: 40px;
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+
+}
+
+.banniereevents {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7e868;
+    height: 600px;
+}
+
+.built-your-imagination {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    font-family: "Montserrat", sans-serif;
+    height: 200px;
+    margin: 50px 0px 50px 0px;
+}
+
+.build {
+    margin: 0;
+}
+
+.imagination {
+    margin: 0 0 0 200px;
+}
+
+.imagination,
+.build {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.your {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    margin: 0 0 0 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 500px;
+
+}
+
+.discover {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    margin: 50px 0 50px 0px;
+    width: 1000px;
+}
+
+.discover-up {
+    margin: 0 0 0 100px;
+}
+
+.discover-down {
+    margin: 0;
+    margin-left: 220px;
+}
+
+#button-events {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    width: 270px;
+    height: 60px;
+    margin: 30px 0px 0px 700px;
+    text-align: center;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+
+#button-events:hover {
+    background-color: #bd190d;
+
+}
+
+.video {
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+}
