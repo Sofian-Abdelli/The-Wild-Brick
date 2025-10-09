@@ -8,6 +8,11 @@ body {
     background-color: white;
 }
 
+:root {
+    --cartColor: #f2cf2a;
+    --buttonColor: #1d68b4;
+}
+
 .shopTopImg {
     display: flex;
     flex-direction: row;
@@ -25,7 +30,7 @@ body {
 
 h1,
 h2 {
-    margin-top: 3rem;
+    margin-top: 10rem;
     margin-bottom: 3rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -41,8 +46,6 @@ p {
     padding: 1rem;
     border-radius: 0.3rem;
     position: relative;
-    margin: auto;
-    padding: 1rem;
     overflow: visible;
     border-radius: 0.3rem;
 }
@@ -109,9 +112,9 @@ p {
     padding: 0.25rem;
     border-radius: 0.3rem;
     border: 0.09375rem solid black;
-    margin: 0.2rem;
+    margin: 1rem;
     max-width: 16.9rem;
-    background-color: #f2cf2a;
+    background-color: var(--cartColor);
     box-shadow: 0.2rem 0.2rem 0.2rem black;
 }
 
@@ -143,19 +146,20 @@ img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-left: 16.3vh;
+    margin-left: 21vh;
     border: 0.1rem solid black;
-    border-radius: 75rem;
-    background-color: #1d68b4;
-    color: #ffffff;
+    border-radius: 0.2rem;
+    background-color: #ffffff;
+    color: var(--buttonColor);
     text-align: center;
-    width: 6rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
     margin-top: -1rem;
+    width: 5vh;
+    height: 5vh;
 
     .cart {
-        width: 2vh;
+        width: 4vh;
         height: auto;
         background-color: #1d68b4;
     }
@@ -178,15 +182,14 @@ img {
     object-fit: hidden;
 }
 
-.shopAll {}
-
 .shopAllProd {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1vh;
+    row-gap: 2rem;
     justify-items: center;
-    width: 75%;
+    width: 65%;
     margin: auto;
+
 }
 
 .shopSlide1 {
@@ -197,11 +200,18 @@ img {
     border-radius: 0.3rem;
     border: 0.09375rem solid black;
     margin: 0.2rem;
-    background-color: #f2cf2a;
+    background-color: var(--cartColor);
     box-shadow: 0.2rem 0.2rem 0.2rem black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.shopSlide1:active {
+    transform: scale(1.10);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .shopSlide1 img {
@@ -215,6 +225,13 @@ img {
 }
 
 @media screen and (max-width: 1000px) {
+
+    h1,
+    h2 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
 
     .shopTopImg {
         display: flex;
@@ -232,7 +249,7 @@ img {
     }
 
     .shopSlider {
-        width: 75%;
+        width: 90%;
     }
 
     .shopArrow {
@@ -241,7 +258,6 @@ img {
 
     .shopAddToCart {
         font-size: 1rem;
-        margin-left: 18vh;
     }
 
     .shopNameProduct {
@@ -258,6 +274,10 @@ img {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .shopSlide {
+        margin: 0.2rem;
+    }
+
 }
 
 @media screen and (max-width: 350px) {
@@ -268,7 +288,11 @@ img {
     }
 
     .shopSlider {
-        width: 80%;
+        width: 100%;
+    }
+
+    .shopSlide {
+        margin: 0.2rem;
     }
 
     .shopArrow {
@@ -276,9 +300,8 @@ img {
     }
 
     .shopAddToCart {
-        margin-top: 0.1vh;
+        margin-top: -1vh;
         font-size: 1rem;
-        margin-left: 15vh;
     }
 
     .shopNameProduct {
