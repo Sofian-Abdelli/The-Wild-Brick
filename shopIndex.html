@@ -198,7 +198,7 @@
                     <img src="gallery/shop/theLatestProducts/shopBatmobile2.png" alt="batmobile en lego">
                     <p class="shopNameProduct">Batmobile classic</p>
                     <p class="shopPriceProduct">$149.99</p>
-                    <p class="shopAddToCart">add to cart</p>
+                    <p class="shopAddToCart">Add to cart</p>
                 </div>
                 <div class="shopSlide1">
                     <img src="gallery/shop/theLatestProducts/shopDeathStar.jpg" alt="étoile de la mort en lego">
@@ -317,38 +317,13 @@
             </article>
         </section>
 
-
         <!-------------------------/BOTTOMMAIN------------------------->
 
     </main>
     <!-------------------------/MAIN------------------------->
 
     <!-------------------------SCRIPT------------------------->
-    <script>
-        const sliders = document.querySelectorAll(".shopSlider");
-
-        sliders.forEach(slider => {
-            const track = slider.querySelector(".shopSliderTrack");
-            const slides = slider.querySelectorAll(".shopSlide");
-            const prev = slider.querySelector(".shopArrow.left");
-            const next = slider.querySelector(".shopArrow.right");
-
-            const slideWidth = slides[0].offsetWidth + 10;
-
-            next.addEventListener("click", () => {
-                track.scrollBy({ left: slideWidth, behavior: "smooth" });
-            });
-
-            prev.addEventListener("click", () => {
-                track.scrollBy({ left: -slideWidth, behavior: "smooth" });
-            });
-
-            track.addEventListener("wheel", (e) => {
-                e.preventDefault();
-                track.scrollBy({ left: e.deltaY, behavior: "smooth" });
-            });
-        });
-    </script>
+    <script src="shopScript.js"></script>
     <!-------------------------/SCRIPT------------------------->
 </body>
 
