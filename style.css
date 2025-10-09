@@ -19,8 +19,6 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
@@ -47,6 +45,7 @@ body {
     gap: 10px;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
 }
 
 .nav-menu li a {
@@ -85,8 +84,6 @@ body {
 
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 2em 20px;
 
 }
@@ -116,4 +113,14 @@ body {
 
 .social-media li img:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+
 }
