@@ -133,11 +133,17 @@ img {
     font-size: 1.5rem;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
+    margin-left: -18vh;
 }
 
 .shopAddToCart {
-    display: block;
-    margin: 0.2vh auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 16.3vh;
     border: 0.1rem solid black;
     border-radius: 75rem;
     background-color: #1d68b4;
@@ -146,6 +152,14 @@ img {
     width: 6rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
+    margin-top: -1rem;
+
+    .cart {
+        width: 2vh;
+        height: auto;
+        background-color: #1d68b4;
+    }
+
 }
 
 .shopAddToCart:hover {
@@ -200,8 +214,6 @@ img {
     user-select: none;
 }
 
-.shopSlide1 p {}
-
 @media screen and (max-width: 1000px) {
 
     .shopTopImg {
@@ -229,6 +241,7 @@ img {
 
     .shopAddToCart {
         font-size: 1rem;
+        margin-left: 18vh;
     }
 
     .shopNameProduct {
@@ -265,6 +278,7 @@ img {
     .shopAddToCart {
         margin-top: 0.1vh;
         font-size: 1rem;
+        margin-left: 15vh;
     }
 
     .shopNameProduct {
