@@ -14,7 +14,7 @@ body {
 .secondaryTitle {
     color: black;
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     display: flex;
     justify-content: left;
     padding: 60px 40px 0px 40px;
@@ -75,7 +75,7 @@ body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    padding: 10px 0;
+    padding: 10px 0px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
 }
@@ -94,11 +94,68 @@ body {
 }
 
 .location {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.location:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.mapPin {
+    padding: 0px 5px 0px 5px;
+}
+
+.agenda {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.agenda:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.calendar {
+    padding: 0px 5px 0px 5px;
+}
+
+.gotop {
+    display: flex;
+    padding: 5vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     color: black;
     text-decoration: none;
 }
 
-.agenda {
-    color: black;
-    text-decoration: none;
+@media (max-width: 992px) {
+  body {
+    margin : 0;
+    padding: 0;
+  }
+
+  .mainTitle {
+    font-size: 46px;
+  }
+
+  .bloc {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+  .blocFooter {
+    font-size: 14px;
+  }
 }
