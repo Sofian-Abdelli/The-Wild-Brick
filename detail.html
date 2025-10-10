@@ -1,154 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Détail</title>
-    <link rel="stylesheet" href="detail.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <!-- Logo (placehodel en attendant le vrai logo)-->
-        <div class="logo">
-          <img
-            src="./logo/lego-high-resolution-logo-transparentTWB.png"
-            alt="logo"
-          />
-        </div>
-        <!-- Menu de navigation-->
-        <ul class="nav-menu">
-          <li><a href="home">Home</a></li>
-          <li><a href="shop">Shop</a></li>
-          <li><a href="creations">Creations</a></li>
-          <li><a href="events">Events</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="contacts">Contacts</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="detail">
-      <h1 id="title">Votre création</h1>
-      <div class="flexDescription">
-        <img id="selectedImage" alt="Création sélectionnée" />
-        <div class="description">
-          <div>
-            <p>🧱 <span>LEGO ARTWORK SHEET </span>— July 2025</p>
-            <p>📅<span> Date of creation:</span> July 17, 2025</p>
-            <p>📍<span>Location:</span> Botanical Garden – Creative Space</p>
-            <p>🧩<span>Number of LEGO bricks:</span> approximately 38,000</p>
-            <p>⏳<span>Building time:</span> 127 hours total (over 2 weeks)</p>
-            <p>👷<span>Team:</span> 4 passionate builders</p>
-            <p>
-              ✨ <span> Artwork description:</span> This LEGO brick sculpture
-              depicts a cheerful young character holding the reins of a sturdy
-              and friendly donkey. The duo was built entirely by hand, brick by
-              brick, with special care given to facial expressions and textural
-              details. The life-size donkey was created using various shades of
-              gray and features a brightly colored saddle that adds contrast and
-              depth. The smiling character, dressed in a traditional blue vest,
-              symbolizes the spirit of adventure and travel.
-            </p>
-            <p>
-              🌿 The piece was exhibited in a lush outdoor space, allowing the
-              vibrant colors of the LEGO bricks to shine under natural light,
-              creating a warm and immersive atmosphere.
-            </p>
-          </div>
 
-          <div><a class="back" href="creations.html">BACK</a></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détail</title>
+  <link rel="stylesheet" href="detail.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo (placehodel en attendant le vrai logo)-->
+      <div class="logo">
+        <img src="./logo/lego-high-resolution-logo-transparentTWB.png" alt="logo" />
+      </div>
+      <!-- Menu de navigation-->
+      <ul class="nav-menu">
+        <li><a href="welcomeindex.html">Home</a></li>
+        <li><a href="shopIndex.html">Shop</a></li>
+        <li><a href="creations.html">Creations</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="detail">
+    <h1 id="title">Votre création</h1>
+    <div class="flexDescription">
+      <img id="selectedImage" alt="Création sélectionnée" />
+      <div class="description">
+        <div>
+          <p>🧱 <span>LEGO ARTWORK SHEET </span>— July 2025</p>
+          <p>📅<span> Date of creation:</span> July 17, 2025</p>
+          <p>📍<span>Location:</span> Botanical Garden – Creative Space</p>
+          <p>🧩<span>Number of LEGO bricks:</span> approximately 38,000</p>
+          <p>⏳<span>Building time:</span> 127 hours total (over 2 weeks)</p>
+          <p>👷<span>Team:</span> 4 passionate builders</p>
+          <p>
+            ✨ <span> Artwork description:</span> This LEGO brick sculpture
+            depicts a cheerful young character holding the reins of a sturdy
+            and friendly donkey. The duo was built entirely by hand, brick by
+            brick, with special care given to facial expressions and textural
+            details. The life-size donkey was created using various shades of
+            gray and features a brightly colored saddle that adds contrast and
+            depth. The smiling character, dressed in a traditional blue vest,
+            symbolizes the spirit of adventure and travel.
+          </p>
+          <p>
+            🌿 The piece was exhibited in a lush outdoor space, allowing the
+            vibrant colors of the LEGO bricks to shine under natural light,
+            creating a warm and immersive atmosphere.
+          </p>
         </div>
+
+        <div><a class="back" href="creations.html">BACK</a></div>
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <section class="comments">
-        <h2>Commentaires</h2>
-        <div class="avg">
-          Note moyenne : <strong id="avgValue">—</strong> / 5 ·
-          <span id="countValue">0</span> commentaire(s)
-        </div>
-
-        <form id="commentForm" autocomplete="off">
-          <div class="row">
-            <label>Votre nom (optionnel)</label>
-            <input type="text" id="author" placeholder="Ex : Anaïs" />
-          </div>
-
-          <div class="row">
-            <label>Votre note</label>
-            <div class="stars" id="stars">
-              <!-- 5 étoiles cliquables -->
-              <span class="star" data-value="1">★</span>
-              <span class="star" data-value="2">★</span>
-              <span class="star" data-value="3">★</span>
-              <span class="star" data-value="4">★</span>
-              <span class="star" data-value="5">★</span>
-              <span id="starsLabel">(0/5)</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <label>Votre commentaire</label>
-            <textarea
-              id="content"
-              maxlength="300"
-              placeholder="Écrivez votre avis (max 300 caractères)"
-            ></textarea>
-            <div class="limit"><span id="len">0</span>/300</div>
-          </div>
-
-          <div class="row">
-            <button type="submit">Envoyer</button>
-          </div>
-        </form>
-
-        <div id="commentsList"></div>
-        <div id="emptyState" class="empty">
-          Aucun commentaire pour l’instant.
-        </div>
-      </section>
-    </div>
-    <footer class="footer">
-      <div class="footer-container">
-        <ul class="social-media">
-          <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <img
-                src="assets.navbar/facebook-brands-solid-full.svg"
-                alt="Facebook"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com" target="_blank">
-              <img
-                src="assets.navbar/instagram-brands-solid-full.svg"
-                alt="Instagram"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com" target="_blank">
-              <img
-                src="assets.navbar/tiktok-brands-solid-full.svg"
-                alt="TikTok"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank">
-              <img
-                src="assets.navbar/x-twitter-brands-solid-full.svg"
-                alt="X (Twitter)"
-              />
-            </a>
-          </li>
-        </ul>
+  <div class="container">
+    <section class="comments">
+      <h2>Commentaires</h2>
+      <div class="avg">
+        Note moyenne : <strong id="avgValue">—</strong> / 5 ·
+        <span id="countValue">0</span> commentaire(s)
       </div>
-      <!-- Ici se trouve les icônes-->
-    </footer>
 
-    <script src="creationsDetail.js"></script>
-  </body>
+      <form id="commentForm" autocomplete="off">
+        <div class="row">
+          <label>Votre nom (optionnel)</label>
+          <input type="text" id="author" placeholder="Ex : Anaïs" />
+        </div>
+
+        <div class="row">
+          <label>Votre note</label>
+          <div class="stars" id="stars">
+            <!-- 5 étoiles cliquables -->
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+            <span id="starsLabel">(0/5)</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Votre commentaire</label>
+          <textarea id="content" maxlength="300" placeholder="Écrivez votre avis (max 300 caractères)"></textarea>
+          <div class="limit"><span id="len">0</span>/300</div>
+        </div>
+
+        <div class="row">
+          <button type="submit">Envoyer</button>
+        </div>
+      </form>
+
+      <div id="commentsList"></div>
+      <div id="emptyState" class="empty">
+        Aucun commentaire pour l’instant.
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <ul class="social-media">
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="assets.navbar/facebook-brands-solid-full.svg" alt="Facebook" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="assets.navbar/instagram-brands-solid-full.svg" alt="Instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com" target="_blank">
+            <img src="assets.navbar/tiktok-brands-solid-full.svg" alt="TikTok" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" target="_blank">
+            <img src="assets.navbar/x-twitter-brands-solid-full.svg" alt="X (Twitter)" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Ici se trouve les icônes-->
+  </footer>
+
+  <script src="creationsDetail.js"></script>
+</body>
+
 </html>
