@@ -249,6 +249,10 @@ img {
     user-select: none;
 }
 
+.shopAll {
+    margin-bottom: 10vh;
+}
+
 @media screen and (max-width: 1000px) {
 
     h1,
