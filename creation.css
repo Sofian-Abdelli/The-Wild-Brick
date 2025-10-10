@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.grid {
+  width: min(100%, 1200px);
+  margin: 40px auto;
+  padding: 0 14px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+
+  .ane {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .bateau {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .chateau {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .singe {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .pharaon {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .marin {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .plongeur {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .dragon {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .horloge {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .lion {
+    grid-column: span 2;
+  }
+}
+
+.texte {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  max-width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(143, 139, 139, 0.457);
+}
+.texte:hover {
+  color: black;
+  opacity: 1;
+  transition: transform 0.5s ease;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #eee;
+  box-shadow: 0px 0px 12px 0px #796e7073;
+}
+.img:hover img {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fedc00;
+  color: black;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 0px 0px 12px 0px #796e7073;
+}
+.btn:hover {
+  background-color: #ffec3d;
+  transition: transform 0.5s ease;
+}
