@@ -72,8 +72,6 @@ span {
   font-weight: bolder;
 }
 
-/* Mini styles pour que ce soit propre sans dépendre de ton style.css */
-
 .container {
   max-width: 900px;
   margin: 0 auto;
