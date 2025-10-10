@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: #f2cf2a;
+    padding: 15px 0;
+}
+
+.nav-container {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    padding: 0;
+    border-radius: 0;
+
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* Menu de navigation */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 20px;
+
+    border-radius: 25px;
+    background-color: #f2cf2a;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-menu li a:hover {
+    background-color: #ffffff;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #F4D03F;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F4D03F;
+    padding: 20px 0;
+}
+
+
+.footer-container {
+    padding: 2em 20px;
+
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    gap: 2em;
+    border: 2px solid #000;
+    border-radius: 25px;
+    background-color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media li img {
+    width: 2em;
+    height: 2em;
+    transition: transform 0.2s ease;
+}
+
+.social-media li img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+
+}
+
+:root {
+    --cartColor: #d9d9d9;
+    --buttonColor: #ffffff;
+}
+
+.shopTopImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5rem;
+}
+
+.shopPtop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    max-width: 80vh;
+    background-color: var(--cartColor);
+    margin: auto;
+    margin-top: 5rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+
+.shopImgL,
+.shopImgR {
+    width: 30rem;
+    border-radius: 5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+.shopSlider {
+    width: 67%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    position: relative;
+    overflow: visible;
+    border-radius: 0.3rem;
+    object-fit: contain;
+}
+
+.shopArrow:hover {
+    background-color: #1d68b4;
+}
+
+.shopArrow.left {
+    left: -2.5rem;
+}
+
+.shopArrow.right {
+    right: -2.5rem;
+}
+
+.shopArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #d9d9d9;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+}
+
+.shopSliderTrack {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    cursor: grab;
+    user-select: none;
+}
+
+.shopSliderTrack.dragging {
+    cursor: grabbing;
+}
+
+.shopSliderTrack::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.shopSliderTrack::-webkit-scrollbar-track {
+    background: #d9d9d9;
+    border-radius: 1rem;
+}
+
+.shopSliderTrack::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 1rem;
+    border: 0.1rem solid #000000;
+}
+
+.shopSliderTrack::-webkit-scrollbar-thumb:hover {
+    background: #f2cf2a;
+    cursor: pointer;
+}
+
+.shopSlide {
+    flex: 0 0 27vh;
+    scroll-snap-align: start;
+    padding: 0.25rem;
+    border-radius: 0.3rem;
+    margin: 1rem;
+    max-width: 16.9rem;
+    background-color: var(--cartColor);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    background-color: #ffffff;
+}
+
+.shopNameProduct {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 0.40rem;
+    margin-bottom: 0.3rem;
+
+}
+
+.shopPriceProduct {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    margin-left: -18vh;
+}
+
+.shopAddToCart {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 21vh;
+    margin-right: 1vh;
+    border-radius: 0.2rem;
+    background-color: #f2cf2a;
+    color: var(--buttonColor);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    margin-top: -1rem;
+    width: 5vh;
+    height: 5vh;
+
+    .cart {
+        width: 4vh;
+        height: auto;
+        background-color: var(--buttonColor);
+        border-radius: 0.125rem;
+    }
+}
+
+.shopAddToCart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #3b983f;
+}
+
+.shopSlide img {
+    width: 100%;
+    height: 30vh;
+    display: block;
+    user-select: none;
+    border-radius: 0.3rem;
+    object-fit: contain;
+}
+
+.shopAllProd {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    justify-items: center;
+    width: 65%;
+    margin: auto;
+
+}
+
+.shopSlide1 {
+    width: 95%;
+    height: 40vh;
+    flex: 0 0 auto;
+    padding: 0.25rem;
+    border-radius: 0.3rem;
+    margin: 0.2rem;
+    background-color: var(--cartColor);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+
+    .shopAddToCart {
+        margin-left: 25vh
+    }
+}
+
+.shopSlide1:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shopSlide1 img {
+    width: 100%;
+    height: 28vh;
+    display: block;
+    object-fit: contain;
+    border-radius: 0.3rem;
+    user-select: none;
+}
+
+.shopAll {
+    margin-bottom: 10vh;
+}
+
+@media screen and (max-width: 1000px) {
+
+    h1,
+    h2 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .shopTopImg {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin: 5rem;
+        gap: 2rem;
+    }
+
+    .shopPtop {
+        margin-bottom: 3rem;
+    }
+
+    .shopImgL,
+    .shopImgR {
+        width: 20rem;
+    }
+
+    .shopSlider {
+        width: 90%;
+    }
+
+    .shopSliderTrack::-webkit-scrollbar {
+        height: 0.1rem;
+    }
+
+    .shopArrow {
+        display: none;
+    }
+
+    .shopAddToCart {
+        font-size: 1rem;
+    }
+
+    .shopSlide1 .shopAddToCart {
+        margin-left: 13rem;
+    }
+
+    .shopNameProduct {
+        font-size: 1rem;
+    }
+
+    .shopPriceProduct {
+        font-size: 1rem;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .shopAllProd {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .shopSlide {
+        margin: 0.2rem;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .shopImgL,
+    .shopImgR {
+        width: 35vh;
+    }
+
+    .shopSlide1 .shopAddToCart {
+        margin-left: 20vh;
+    }
+
+    .shopSlider {
+        width: 100%;
+    }
+
+    .shopSlide {
+        margin: 0.2rem;
+    }
+
+    .shopArrow {
+        display: none;
+    }
+
+    .shopAddToCart {
+        margin-top: -1vh;
+        font-size: 1rem;
+    }
+
+    .shopNameProduct {
+        font-size: 1rem;
+    }
+
+    .shopPriceProduct {
+        font-size: 1rem;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+
+}
