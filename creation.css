@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
 
 .grid {
   width: min(100%, 1200px);
