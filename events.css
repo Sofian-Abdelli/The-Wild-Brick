@@ -1,10 +1,30 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --title-color: #000000;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --title-color: #ffffff;
+    --shadow-color: rgba(255,255,255,0.1)
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
     margin : 0;
     padding: 0vh;
 }
 
 .mainTitle {
-    color: black;
+    color: var(--title-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 56px;
     display: flex;
@@ -12,7 +32,7 @@ body {
 }
 
 .secondaryTitle {
-    color: black;
+    color: var(--title-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     display: flex;
@@ -53,7 +73,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     height: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--shadow-color), 0 8px 20px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -73,8 +93,9 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     padding: 10px 0px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -97,12 +118,11 @@ body {
     display: flex;
     color: black;
     text-decoration: none;
-    font-style: italic;
 }
 
 .location:hover {
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .mapPin {
@@ -113,12 +133,11 @@ body {
     display: flex;
     color: black;
     text-decoration: none;
-    font-style: italic;
 }
 
 .agenda:hover {
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .calendar {
@@ -132,9 +151,31 @@ body {
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
+
+button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
 
 @media (max-width: 992px) {
   body {
