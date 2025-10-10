@@ -7,3 +7,5 @@ const titleEl = document.getElementById("title");
 
 imgEl.src = src;
 titleEl.textContent = title;
+
+const storageKey = `comments:${src}`;

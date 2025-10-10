@@ -9,16 +9,91 @@
   <body>
     <div class="detail">
       <h1 id="title">Votre création</h1>
-      <img id="selectedImage" alt="Création sélectionnée" />
-      <div class="description">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, modi
-          in error ipsam, esse nisi alias iusto adipisci molestiae a fugiat
-          nihil ad nam molestias doloribus accusantium necessitatibus quo
-          ratione!
-        </p>
+      <div class="flexDescription">
+        <img id="selectedImage" alt="Création sélectionnée" />
+        <div class="description">
+          <div>
+            <p>📅<span> Date de réalisation :</span> 17 juillet 2025</p>
+            <p>
+              📍<span>Lieu :</span> Jardin botanique – Espace Création environ
+              38 000 pièces
+            </p>
+            <p>🧱<span>Nombre de pièces LEGO :</span></p>
+            <p>
+              ⏳<span>Temps de construction :</span> 127 heures cumulées (sur 2
+              semaines)
+            </p>
+            <p>👷<span>Équipe :</span> 4 constructeurs passionnés</p>
+            <p>
+              ✨ <span>Description de l’œuvre :</span> Cette sculpture en
+              briques LEGO représente un jeune personnage joyeux tenant la bride
+              d’un âne robuste et amical. Le duo est construit entièrement à la
+              main, brique par brique, avec une attention particulière portée
+              aux détails des expressions et aux textures. L’âne, grandeur
+              nature, est réalisé avec différentes nuances de gris et une selle
+              aux couleurs vives pour ajouter du relief. Le personnage, souriant
+              et vêtu d’un gilet bleu traditionnel, symbolise l’esprit
+              d’aventure et de voyage.
+            </p>
+            <p>
+              🌿 L’œuvre a été exposée dans un espace extérieur verdoyant,
+              mettant en valeur les couleurs éclatantes des briques sous la
+              lumière naturelle.
+            </p>
+          </div>
+
+          <div><a class="back" href="creations.html">RETOUR</a></div>
+        </div>
       </div>
-      <div><a class="back" href="creations.html">RETOUR</a></div>
+    </div>
+
+    <div class="container">
+      <section class="comments">
+        <h2>Commentaires</h2>
+        <div class="avg">
+          Note moyenne : <strong id="avgValue">—</strong> / 5 ·
+          <span id="countValue">0</span> commentaire(s)
+        </div>
+
+        <form id="commentForm" autocomplete="off">
+          <div class="row">
+            <label>Votre nom (optionnel)</label>
+            <input type="text" id="author" placeholder="Ex : Anaïs" />
+          </div>
+
+          <div class="row">
+            <label>Votre note</label>
+            <div class="stars" id="stars">
+              <!-- 5 étoiles cliquables -->
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+              <span id="starsLabel">(0/5)</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <label>Votre commentaire</label>
+            <textarea
+              id="content"
+              maxlength="300"
+              placeholder="Écrivez votre avis (max 300 caractères)"
+            ></textarea>
+            <div class="limit"><span id="len">0</span>/300</div>
+          </div>
+
+          <div class="row">
+            <button type="submit">Envoyer</button>
+          </div>
+        </form>
+
+        <div id="commentsList"></div>
+        <div id="emptyState" class="empty">
+          Aucun commentaire pour l’instant.
+        </div>
+      </section>
     </div>
 
     <script src="creationsDetail.js"></script>
