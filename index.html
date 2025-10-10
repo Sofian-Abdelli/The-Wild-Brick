@@ -15,9 +15,13 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
+
     <img class=banniere src="videos/banniere thewildbrick.png" alt="banniere lege the wild brick">
     <div class="slogan"><b>Here, we love legos.</b></div>
-    <div class="presentation">
+    <section class="homeHeader">
+        <video autoplay muted loop class="video">
+            <source src="videos/37053-413229543_tiny.mp4" type="video/mp4">
+        </video>
         <div class="textpresentation">
             <div class="textpres1">
                 <p>Whether you're a lifelong builder, a creative mind, or just discovering the joy of bricks, you've
@@ -34,9 +38,42 @@
                     <p>Inspire.</p>
                 </b>
             </div>
+    </section>
+    <img class="arrowbottom" src="videos/arrow-down-circle.svg" alt="icone fleche bas">
+    <div class="center">
+        <div class="wrapper">
+            <div class="inner" style="transform: translateX(-0%);">
+                <div class="card">
+                    <img src="gallery/ane.jpg" alt="ane en lego">
+                </div>
+                <div class="card">
+                    <img src="gallery/chateau.jpg" alt="chateau en lego">
+                </div>
+                <div class="card">
+                    <img src="gallery/city.jpg" alt="ville en lego">
+                </div>
+                <div class="card">
+                    <img src="gallery/marin.jpg" alt="marin en lego">
+                </div>
+                <div class="card">
+                    <img src="gallery/monument.jpg" alt="temple en lego">
+                </div>
+                <div class="card">
+                    <img src="gallery/monument.jpg" alt="temple en lego">
+                </div>
+                <div id="card">
+                    <div class="more-creations">
+                        See more creations
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <button class="active first"></button>
+            <button class="second"></button>
+            <button class="third"></button>
         </div>
     </div>
-    <img class="arrowbottom" src="videos/arrow-down-circle.svg" alt="icone fleche bas">
     <div class="banniereevents" onclick="">
 
         <div class="container">
@@ -54,9 +91,8 @@
             </div>
         </div>
     </div>
-    <video autoplay muted loop class="video">
 
-        <source src="videos/37053-413229543_tiny.mp4" type="video/mp4">
+    <script src="script.js"></script>
 </body>
 
 </html>
