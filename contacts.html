@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="gallery/logo.ico">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <title>The Wild Brick | Contact</title>
+</head>
+
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo (placehodel en attendant le vrai logo)-->
+                <div class="logo">
+                    <img src="logo/lego-high-resolution-logo-transparentTWB.png" alt="logo" />
+                </div>
+                <!-- Menu de navigation-->
+                <ul class="nav-menu">
+                    <li><a href="welcomeindex.html">Home</a></li>
+                    <li><a href="shopIndex.html">Shop</a></li>
+                    <li><a href="creations.html">Creations</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contactTitle">
+            <h1>Get in touch</h1>
+            <p>We'd love to hear from you ! Drop us a message, and we'll connect with you to soon.</p>
+        </div>
+        <form class="contactform" id="contactForm">
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Your name">
+            <label for="firstname"></label>
+            <input type="text" id="firstname" placeholder="Your firstname">
+            <label for="email"></label>
+            <input type="email" id="email" placeholder="Your email">
+            <label for="phone"></label>
+            <input type="number" id="phone" placeholder="Your phone number">
+            <label>
+                <textarea id="message" name="message" rows="5" cols="66" maxlength="500" wrap
+                    placeholder="Your message..."></textarea>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        <!--pop-up de confirmation-->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <h2> Message sent</h2>
+            <p>Thank you for contacting us. We'll get back to you soon.</p>
+            <button id="closeModal">OK</button>
+        </div>
+        </div>    
+        <hr class="divider">
+        <section class="coordonnees">
+            <h2>The Wild Brick</h2>
+            <ul class="contactliste">
+                <li class="adresse">17 rue des Grenouilles Chantantes</li>
+                <li class="ville">75008 Paris</li>
+                <li class="mail">team_de_choc@thewildbrick.com</li>
+                <li class="tel">+33 6 72 45 19 88</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="assets.navbar/facebook-brands-solid-full.svg" alt="Facebook" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="assets.navbar/instagram-brands-solid-full.svg" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com" target="_blank">
+                        <img src="assets.navbar/tiktok-brands-solid-full.svg" alt="TikTok" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="assets.navbar/x-twitter-brands-solid-full.svg" alt="X (Twitter)" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Ici se trouve les icônes-->
+    </footer>
+    <script src="contact.js"></script>
+</body>
