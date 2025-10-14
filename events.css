@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
@@ -9,7 +15,7 @@ body.dark-theme {
     --bg-color: #121212;
     --text-color: #ffffff;
     --title-color: #ffffff;
-    --shadow-color: rgba(255,255,255,0.1)
+    --shadow-color: rgba(255,255,255,0.1);
 }
 
 body {
@@ -69,7 +75,47 @@ body {
     background-color: #ffffff;
 }
 
+h1 {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    border-width: 4px 0;
+    padding: 12vh 0vh;
+}
+
+h1 span {
+    font: 900 4em/1 "Montserrat", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+    background: url(gallery/events/banner.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aitf 10s linear infinite;
+    -webkit-animation: aitf 10s linear infinite;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
 .mainTitle {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.pageTitle {
     color: var(--title-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 56px;
@@ -82,7 +128,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     padding: 60px 40px 0px 40px;
 }
 
@@ -141,7 +187,7 @@ body {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 10px 0px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -158,12 +204,14 @@ body {
 .blocFooterLinks {
     display: flex;
     justify-content: space-around;
+    font-style: italic;
 }
 
 .location {
     display: flex;
     color: black;
     text-decoration: none;
+    padding: 10px 0px 10px 0px;
 }
 
 .location:hover {
@@ -172,13 +220,14 @@ body {
 }
 
 .mapPin {
-    padding: 0px 5px 0px 5px;
+    width: 40px;
 }
 
 .agenda {
     display: flex;
     color: black;
     text-decoration: none;
+    padding: 10px 0px 10px 0px;
 }
 
 .agenda:hover {
@@ -187,7 +236,7 @@ body {
 }
 
 .calendar {
-    padding: 0px 5px 0px 5px;
+    width: 40px;
 }
 
 .gotop {
@@ -223,18 +272,17 @@ button:hover {
 }
 
 .footer {
-    background-color: #F4D03F;
-    position: relative;
+    background-color: #f2cf2a;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #F4D03F;
-    padding: 20px 0;
+    background-color: #f2cf2a;
+    width: auto;
 }
 
 
 .footer-container {
-    padding: 2em 20px;
+    padding: 2em 1.25rem;
 
 }
 
@@ -243,8 +291,8 @@ button:hover {
     display: flex;
     justify-content: left;
     gap: 2em;
-    border: 2px solid #000;
-    border-radius: 25px;
+    border: 0.125rem solid #000;
+    border-radius: 1.5625rem;
     background-color: #fff;
     display: inline-block;
     font-weight: bold;
@@ -259,6 +307,7 @@ button:hover {
     width: 2em;
     height: 2em;
     transition: transform 0.2s ease;
+    border-radius: 1.5rem;
 }
 
 .social-media li img:hover {
@@ -277,8 +326,19 @@ body {
     gap: 16px;
 }
 
-.mainTitle {
+h1 {
+    width: auto;
+    padding: 3em 0;
+    text-align: center;
+}
+
+h1 span {
+    font: 900 3em/1 "Montserrat", sans-serif;
+}
+
+.pageTitle {
     font-size: 46px;
+    padding: 1em 0;
 }
 
 .bloc {
@@ -291,6 +351,20 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
 .blocFooter {
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.blocFooterLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.location {
+    padding: 20px 0px 0px 5px;
+}
+
+.agenda {
+    padding: 10px 0px 0px 5px;
 }
 }
