@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-------------------------HEAD------------------------->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Thibaud">
     <link rel="stylesheet" href="shopStyle.css">
-
-    <!-------------------------FONT------------------------->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-------------------------FONT------------------------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
@@ -22,24 +18,18 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <!-------------------------/FONT------------------------->
-
-    <title>The Wild Brick | Shop</title>
+<title>The Wild Brick | Shop</title>
 </head>
-
 <!-------------------------/HEAD------------------------->
-
 <!-------------------------BODY------------------------->
-
 <body>
     <a id="top"></a>
-    <!--Navbar-->
+    <!---------------------Navbar------------------------->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Logo (placehodel en attendant le vrai logo)-->
             <div class="logo">
                 <img src="logo/lego-high-resolution-logo-transparentTWB.png" alt="logo" />
             </div>
-            <!-- Menu de navigation-->
             <ul class="nav-menu">
                 <li><a href="welcomeindex.html">Home</a></li>
                 <li><a href="shopIndex.html">Shop</a></li>
@@ -47,23 +37,23 @@
                 <li><a href="events.html">Events</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
-                <li><img src="gallery/shop/shopIcon/cart.svg" class="cartTop" alt="cart"></li>
+                <li>
+                    <a href="shopCart.html" class="a2">
+                    <img src="gallery/shop/shopIcon/cart.svg" class="cartTop" alt="cart">
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
-
-    <!-------------------------MAIN------------------------->
-
-    <main>
-
-        <!-------------------------TOPMAIN------------------------->
-
-        <div class="shopTopImg">
+    <!---------------------/Navbar------------------------->
+<!-------------------------MAIN------------------------->
+<main>
+<!-------------------------TOPMAIN------------------------->
+<div class="shopTopImg">
             <img src="gallery/shop/bannière3.png" alt="bannière shop" class="shopImgL">
             <img src="gallery/shop/shopWelcome2.png" alt="welcome on our shop" class="shopImgR">
-        </div>
-
-        <p class="shopPtop"><strong>Gifts and Toys LEGO®</strong> <br> our sets make the perfect gifts for all ages,
+    </div>
+<p class="shopPtop"><strong>Gifts and Toys LEGO®</strong> <br> our sets make the perfect gifts for all ages,
             children over 5 and
             adults
             alike. Whether
@@ -71,10 +61,8 @@
             fascinated by famous buildings, unique characters or vehicles, our toy kits offer a fun challenge for every
             age group
             and are sure to impress!</p>
-
-        <h1>The latest products</h1>
-
-        <section class="shopSlider">
+<h1>The latest products</h1>
+<section class="shopSlider">
             <button class="shopArrow left">&#10094;</button>
             <article class="shopSliderTrack">
                 <div class="shopSlide">
@@ -146,19 +134,14 @@
                     <p class="shopPriceProduct">$299.99</p>
                     <p class="shopAddToCart"><img src="gallery/shop/shopIcon/cart.svg" class="cart" alt="add to cart">
                     </p>
-
                 </div>
             </article>
             <button class="shopArrow right">&#10095;</button>
         </section>
-
-        <!-------------------------/TOPMAIN------------------------->
-
-        <!-------------------------MIDMAIN------------------------->
-
-        <h2>Don't miss our good deals</h2>
-
-        <section class="shopSlider">
+<!-------------------------/TOPMAIN------------------------->
+<!-------------------------MIDMAIN------------------------->
+<h2>Don't miss our good deals</h2>
+<section class="shopSlider">
             <article class="shopSliderTrack">
                 <button class="shopArrow left">&#10094;</button>
                 <div class="shopSlide">
@@ -234,14 +217,10 @@
             </article>
             <button class="shopArrow right">&#10095;</button>
         </section>
-
-        <!-------------------------/MIDMAIN------------------------->
-
-        <!-------------------------BOTTOMMAIN------------------------->
-
-        <h2>All our products</h2>
-
-        <section class="shopAll">
+<!-------------------------/MIDMAIN------------------------->
+<!-------------------------BOTTOMMAIN------------------------->
+<h2>All our products</h2>
+<section class="shopAll">
             <article class="shopAllProd">
                 <div class="shopSlide1">
                     <img src="gallery/shop/theLatestProducts/shopBatmobile2.png" alt="batmobile en lego">
@@ -385,15 +364,12 @@
                 </div>
             </article>
         </section>
-
-        <p class="shopReturnTop"><a href="#top">Return to the top</a></p>
-
-        <!-------------------------/BOTTOMMAIN------------------------->
-
-    </main>
+<p class="shopReturnTop"><a href="#top">Return to the top</a></p>
+<!-------------------------/BOTTOMMAIN------------------------->
+</main>
     <!-------------------------/MAIN------------------------->
-
-    <footer class="footer">
+    <!-------------------------FOOTER------------------------->
+<footer class="footer">
         <div class="footer-container">
             <ul class="social-media">
                 <li>
@@ -418,14 +394,13 @@
                 </li>
             </ul>
         </div>
-        <!-- Ici se trouve les icônes-->
     </footer>
+    <!-------------------------/FOOTER------------------------->
 
-    <!-------------------------SCRIPT------------------------->
+
+<!-------------------------SCRIPT------------------------->
     <script src="shopScript.js"></script>
     <!-------------------------/SCRIPT------------------------->
 </body>
-
 <!-------------------------/BODY------------------------->
-
 </html>

@@ -13,51 +13,13 @@ body {
     background-color: #ffffff;
 }
 
-/* === NAVBAR === */
+/* =============================== NAVBAR ============================== */
+
 .navbar {
     background-color: #f2cf2a;
     padding: 0.9375rem 0;
 }
 
-.nav-container {
-    padding: 0 1.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cartTop {
-    width: 2.5rem;
-    height: auto;
-    background-color: var(--buttonColor);
-    border: 0.2rem solid #d02a12;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cartTop:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
-    border: 0.2rem solid #3b983f;
-}
-
-/* Logo */
-.logo {
-    padding: 0;
-    border-radius: 0;
-}
-
-.logo img {
-    height: 2.5rem;
-    width: auto;
-    display: block;
-    border-radius: 0.05rem;
-    background: none;
-
-}
-
-/* Menu de navigation */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -83,7 +45,21 @@ body {
     background-color: #ffffff;
 }
 
-/* === MAIN CONTENT === */
+.nav-menu li .a2 {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1.5625rem;
+    background-color: #f2cf2a;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-menu li .a2:hover {
+    background-color: #f2cf2a;
+}
+
 .main-content {
     flex: 1;
     background-color: #fff;
@@ -91,7 +67,60 @@ body {
     border-right: 0.125rem solid #000;
 }
 
+.nav-container {
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.cartTop {
+    width: 2.5rem;
+    height: auto;
+    background-color: var(--buttonColor);
+    border: 0.2rem solid #ffffff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartTop:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 0.2rem solid #3b983f;
+}
+
+.logo {
+    padding: 0;
+    border-radius: 0;
+}
+
+.logo img {
+    height: 2.5rem;
+    width: auto;
+    display: block;
+    border-radius: 0.05rem;
+    background: none;
+
+}
+
+/* =============================== CART ============================== */
+.cartCounter {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.3125rem;
+    background: #3b983f;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*===============================TOP==============================*/
 
 .shopTopImg {
     display: flex;
@@ -284,6 +313,8 @@ img {
     }
 }
 
+/*===============================BOTTOM==============================*/
+
 .shopSlide img {
     width: 100%;
     height: 30vh;
@@ -353,7 +384,8 @@ img {
     }
 }
 
-/* === FOOTER === */
+/*===============================FOOTER==============================*/
+
 .footer {
     background-color: #f2cf2a;
     bottom: 0;
@@ -396,6 +428,8 @@ img {
 .social-media li img:hover {
     transform: scale(1.2);
 }
+
+/*===============================RESPONSIVE==============================*/
 
 @media screen and (max-width: 1000px) {
     .nav-menu {
