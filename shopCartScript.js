@@ -102,14 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
       main.appendChild(cartContainer);
       main.appendChild(totalDisplay);
 
-    
+      const btnContainer = document.createElement("div");
+      btnContainer.classList.add("btnContainer");
+
       const clearBtn = document.createElement("button");
       clearBtn.textContent = "Empty cart";
       clearBtn.classList.add("btnClearCart");
       clearBtn.addEventListener("click", () => {
           localStorage.removeItem("cart");
           displayCart();
-          
           updateCartCounter();
         });
 
@@ -120,6 +121,9 @@ document.addEventListener("DOMContentLoaded", () => {
       checkoutBtn.classList.add("btnCheckout");
 
       main.appendChild(checkoutBtn);
+
+      btnContainer.append(clearBtn, checkoutBtn);
+      main.appendChild(btnContainer);
 
     }
 
