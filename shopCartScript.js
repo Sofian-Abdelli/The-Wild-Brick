@@ -65,11 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     cart.splice(index, 1);
                 }
                 saveCart(cart);
+
+                updateCartCounter();
+
             });
 
             plusBtn.addEventListener("click", () => {
                 item.quantity++;
                 saveCart(cart);
+
+                updateCartCounter();
+
             });
 
             quantityContainer.appendChild(minusBtn);
@@ -103,10 +109,41 @@ document.addEventListener("DOMContentLoaded", () => {
       clearBtn.addEventListener("click", () => {
           localStorage.removeItem("cart");
           displayCart();
+          
+          updateCartCounter();
         });
 
       main.appendChild(clearBtn);
+
+      const checkoutBtn = document.createElement("button");
+      checkoutBtn.textContent = "Go to checkout";
+      checkoutBtn.classList.add("btnCheckout");
+
+      main.appendChild(checkoutBtn);
+
     }
 
   displayCart();
 });
+
+function updateCartCounter() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    const cartIcon = document.querySelector(".cartTop");
+    if (!cartIcon) return;
+
+    let counter = document.querySelector(".cartCounter");
+
+    if (!counter) {
+        counter = document.createElement("span");
+        counter.classList.add("cartCounter");
+        cartIcon.parentElement.style.position = "relative";
+        cartIcon.parentElement.appendChild(counter);
+    }
+
+    counter.textContent = totalItems;
+    counter.style.display = totalItems > 0 ? "flex" : "none";
+}
+
+updateCartCounter();
