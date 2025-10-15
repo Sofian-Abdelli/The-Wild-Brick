@@ -1,3 +1,19 @@
+//-------------------------dark theme--------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("toggle-theme");
+  const body = document.body;
+
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    body.classList.add("dark-theme");
+  }
+
+  toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+    const newTheme = body.classList.contains("dark-theme") ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+  });
+});
 document.addEventListener("DOMContentLoaded", () => {
 
     function getCart() {
@@ -15,10 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const cart = getCart();
         main.innerHTML = "";
-
-        const title = document.createElement("h1");
-        title.textContent = "Your Cart";
-        main.appendChild(title);
 
         if (cart.length === 0) {
             const emptyMsg = document.createElement("p");

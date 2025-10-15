@@ -7,10 +7,48 @@
 :root {
     --cartColor: #d9d9d9;
     --buttonColor: #ffffff;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --title-color: #000000;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* =============================== DARK THEME ============================== */
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --title-color: #ffffff;
+    --shadow-color: rgba(255,255,255,0.1);
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin : 0;
+    padding: 0vh;
+}
+
+#toggle-theme {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
 /* =============================== NAVBAR ============================== */
@@ -103,6 +141,57 @@ body {
     background: none;
 
 }
+/* =============================== TITLE ============================== */
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    border-width: 4px 0;
+    padding: 12vh 0vh;
+}
+
+h1 span {
+    font: 900 4em/1 "Montserrat", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+    background: url(gallery/shop/shopCartBanner.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aitf 10s infinite alternate;
+    -webkit-animation: aitf 10s infinite alternate;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.mainTitle {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+h1 {
+    width: auto;
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1 span {
+    font: 900 3em/1 "Montserrat", sans-serif;
+}
 
 /* =============================== CART ============================== */
 
@@ -121,10 +210,11 @@ body {
     justify-content: center;
 }
 
-h1,h2 {
-    margin-top: 2.5rem;
+h2 {
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: "montserrat", sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -287,7 +377,6 @@ main {
         justify-items: center;
     }
 
-    h1,
     h2 {
         margin-top: 2rem;
         margin-bottom: 0.5rem;
@@ -310,7 +399,4 @@ main {
         margin-left: 2vw;
     }
 
-}
-
-@media screen and (max-width: 350px) {
 }
