@@ -50,6 +50,21 @@ body {
     display: block;
 }
 
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -82,7 +97,7 @@ h1 {
     padding: 12vh 0vh;
 }
 
-h1 span {
+.mainTitle2 {
     font: 900 4em/1 "Montserrat", sans-serif;
     letter-spacing: 0;
     padding: .25em 0 .325em;
@@ -92,8 +107,8 @@ h1 span {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: aitf 10s linear infinite;
-    -webkit-animation: aitf 10s linear infinite;
+    animation: aitf 10s infinite alternate;
+    -webkit-animation: aitf 10s infinite alternate;
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
     backface-visibility: hidden;
@@ -113,14 +128,6 @@ h1 span {
 @-webkit-keyframes aitf {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
-}
-
-.pageTitle {
-    color: var(--title-color);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 56px;
-    display: flex;
-    justify-content: center;
 }
 
 .secondaryTitle {
@@ -320,25 +327,42 @@ body {
     padding: 0;
 }
 
-.nav-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+.burger {
+    display: flex;
 }
 
-h1 {
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f2cf2a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.mainTitle2 {
+    font: 900 3em/1 "Montserrat", sans-serif;
     width: auto;
     padding: 3em 0;
     text-align: center;
 }
 
-h1 span {
-    font: 900 3em/1 "Montserrat", sans-serif;
-}
-
-.pageTitle {
-    font-size: 46px;
-    padding: 1em 0;
+.secondaryTitle2 {
+    font-size: 32px;
 }
 
 .bloc {
