@@ -44,8 +44,13 @@ buttonsWrapper.addEventListener("click", e => {
 var rellax = new Rellax('.textpres2');
 var rellax1 = new Rellax('.textpres1')
 var rellax2 = new Rellax('.shopsentence');
-const rellaxtest = new Rellax (".rellaxtest");
 const rellax3 = new Rellax (".built-your-imagination");
+const lego1 = new Rellax('.lego1');
+const lego2 = new Rellax('.lego2');
+const lego3 = new Rellax('.lego3');
+const lego4 = new Rellax('.lego4');
+const lego5 = new Rellax('.lego5');
+const lego6 = new Rellax('.lego6');
 
 
 //cookies//

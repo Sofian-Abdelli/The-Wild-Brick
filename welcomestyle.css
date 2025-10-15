@@ -164,7 +164,7 @@ body {
     object-fit: cover;
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     background-color: white;
-    margin-top: -100px;
+        z-index: 6;
 }
 
 .homeHeader {
@@ -186,10 +186,12 @@ body {
 
 .slogan {
     font-family: "Montserrat Alternates", sans-serif;
-    font-size: 70px;
+    font-size: 150px;
     text-shadow: rgb(255, 255, 255) 5px 5px;
     text-align: center;
-    padding: 15rem 0px 14rem 0px;
+    padding: 0px 0px 20rem 0px;
+    margin-top: -50px;
+ position: relative;
 }
 
 .presentation {
@@ -262,6 +264,8 @@ position: relative;
 left: 66%;
 transform: translateX(-50%);
 box-shadow: 10px 10px 20px #000;
+position: relative;
+z-index: 5;
 
 }
 .banniereevents {
@@ -272,6 +276,8 @@ box-shadow: 10px 10px 20px #000;
     margin-top: 100px;
     margin-bottom: 200px;
     padding-bottom: 200px;
+    position: relative;
+    z-index: 4;
 }
 
 .built-your-imagination {
@@ -372,6 +378,8 @@ box-shadow: 10px 10px 20px #000;
     height: 100%;
     justify-content: center;
     margin-bottom: 100px;
+    position: relative;
+    z-index: 5;
 }
 
 .wrapper {
@@ -496,6 +504,7 @@ z-index: -3;
 
 .shop {
   position: relative;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -514,7 +523,7 @@ z-index: -3;
   width: 100%;
   height: 100%;
   object-fit: cover; 
-  z-index: 0;
+  z-index: 2;
     object-position: 50% 35%;
   opacity: 0.25; 
 }
@@ -522,7 +531,7 @@ z-index: -3;
 .shoptext,
 .buttonshop {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .shopsentence {
@@ -599,3 +608,67 @@ z-index: -3;
   }
   #acceptCookies { background-color: #4CAF50; color: white; }
   #declineCookies { background-color: #f44336; color: white; }
+
+  .parallax-lego {
+    position: relative;
+margin: auto;
+margin-top: 200px;
+;
+
+
+  }
+
+  .lego1 { 
+    width: 200px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    top: -500px;
+
+  }
+  
+    .lego2 {
+    width: 100px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+top: -500px;
+      }  
+  
+  .lego3 {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: -1;
+top: -500px;
+  }
+  
+  .lego4 {
+    width: 130px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+top: -500px;
+  }
+  
+  .lego5 {
+    width: 200px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  top: -500px;}
+  
+    .lego6 {
+    width: 170px;
+    height: auto;
+    position: relative;
+    z-index: -1;
+top: -400px;
+  }
+
+  @keyframes slowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+  }
+ 
+
