@@ -14,7 +14,16 @@
     <link rel="stylesheet" href="welcomestyle.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
+<div id="cookie-banner" class="cookie-banner" aria-hidden="true">
+  <p>
+    Nous utilisons des cookies pour améliorer votre expérience. 
+    <a href="/politique-cookies.html" target="_blank">En savoir plus</a>
+  </p>
+  <div class="actions">
+    <button id="acceptCookies">Accepter</button>
+    <button id="declineCookies">Refuser</button>
+  </div>
+</div>
 <body>
 
     <!--Navbar-->
@@ -40,13 +49,18 @@
 
 
     <img class=banniere src="gallery/banniere thewildbrick.png" alt="banniere lege the wild brick">
+    <div class="rellaxtest" data-rellax-speed="-3">
+
+</div>
+
     <div class="slogan"><b>Here, we love legos.</b></div>
+
     <section class="homeHeader">
         <video autoplay muted loop class="video">
             <source src="gallery/37053-413229543_tiny.mp4" type="video/mp4">
         </video>
         <div class="textpresentation">
-            <div class="textpres1">
+            <div class="textpres1" data-rellax-speed="2">
                 <p>Whether you're a lifelong builder, a creative mind, or just discovering the joy of bricks, you've
                     found
                     your home.</p>
@@ -55,7 +69,7 @@
                 <p>Join us and rediscover the magic of LEGO through stories, tutorials, and amazing fan creations from
                     around the world.</p>
             </div>
-            <div class="textpres2"><b>
+            <div class="textpres2" data-rellax-speed="-2"><b>
                     <p>Build.</p>
                     <p>Share.</p>
                     <p>Inspire.</p>
@@ -63,7 +77,7 @@
             </div>
     </section>
     <img class="arrowbottom" src="gallery/arrow-down-circle.svg" alt="icone fleche bas">
-    <div class="center">
+    <div class="center" id="content">
         <div class="wrapper">
             <div class="inner" style="transform: translateX(-0%);">
                 <div class="card">
@@ -97,10 +111,12 @@
             <button class="third"></button>
         </div>
     </div>
-    <div class="banniereevents" onclick="">
+
+    <img id=photoevents src="gallery/the-art-of-brick-marseille.jpg" alt=" photo expo the art of brick">
+  <div class="banniereevents">
 
         <div class="container">
-            <div class="built-your-imagination">
+            <div class="built-your-imagination" data-rellax-speed="-2" data-rellax-percentage="0.7">
                 <p class="build">BUILD</p>
                 <p class="your">YOUR</p>
                 <p class="imagination">IMAGINATION</p>
@@ -109,11 +125,28 @@
                 <p class="discover-up">Discover creations, challenges,</p>
                 <p class="discover-down">and stories from LEGO lovers around the world.</p>
             </div>
-            <div id="button-events">
-                <p>ALL THE EVENTS HERE</p>
-            </div>
-        </div>
+                       <a href="events.html" id="button-events">All the events here !</a>
+                    </div>
     </div>
+
+   <!-- <p class="shopsentence" data-rellax-speed="2" data-rellax-percentage="1"><b>SHOP</b></p>
+   <section class="shop">
+ <img id=heihei src="gallery/43272_Prod_en-gb.png" alt= heihei en lego>
+        <a href="shopIndex.html" class="buttonshop">Shop here !</a>
+        </section> -->
+       <section class="shop">
+  <p class="shopsentence" data-rellax-speed="2" data-rellax-percentage="0.4"><b>SHOP</b></p>
+
+  <img id="gizmo" src="gallery/shop/theLatestProducts/shopGizmo2.png" alt="LEGO set image" />
+
+  <p class="shoptext">
+    Discover our exclusive LEGO® kits, creative sets for builders of all ages.<br>
+    Click below to explore the full collection !
+  </p>
+
+  <a href="shopIndex.html" class="buttonshop">Shop here !</a>
+</section>
+
     <footer class="footer">
         <div class="footer-container">
             <ul class="social-media">
@@ -142,7 +175,7 @@
         <!-- Ici se trouve les icônes-->
     </footer>
 
-
+<script src="moduleJS/rellax.min.js"></script>
     <script src="welcomescript.js"></script>
 </body>
 
