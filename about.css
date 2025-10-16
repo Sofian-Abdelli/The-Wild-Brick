@@ -340,12 +340,27 @@ body {
   transform: translateY(-2px);
 }
 
+/*style appliqué au nav burger*/
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
 
 /* style version mobile */
 @media screen and (max-width: 992px) {
     body {
-        padding: 20px 40px 0 40px;
-        /* Réduction du padding latéral */
+        padding: 0;
 
         .abouttitle {
             padding: 20px 0 40px 0;
@@ -536,5 +551,31 @@ body {
         gap: 16px;
     }
 
+.burger {
+    display: flex;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f2cf2a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li {
+    text-align: center;
+    margin: 10px 0;
+}
 
 }
