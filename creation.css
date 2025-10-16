@@ -2,6 +2,14 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* === NAVBAR === */
 .navbar {
   background-color: #f2cf2a;
@@ -54,12 +62,42 @@
   background-color: #ffffff;
 }
 
-/* === MAIN CONTENT === */
-.main-content {
-  flex: 1;
-  background-color: #fff;
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
+/* ANIMATION WILD BIRCK */
+
+.mainTitle {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    border-width: 4px 0;
+    padding: 5vh 0vh;
+  }
+
+  h1 span {
+    font: 900 2em/1 "Montserrat", sans-serif;
+    letter-spacing: 0;
+    padding: 0.25em 0 0.325em;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    background: url(./gallery/creation/banner1.png) repeat-x;
+    background-size: auto 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aitf 100s linear infinite;
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 2000% 50%;
+  }
 }
 
 /* === FOOTER === */
@@ -69,7 +107,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #f4d03f;
   padding: 20px 0;
 }
 
@@ -79,13 +116,12 @@
 
 .social-media {
   list-style: none;
-  display: flex;
+  display: inline-block;
   justify-content: left;
   gap: 2em;
   border: 2px solid #000;
   border-radius: 25px;
   background-color: #fff;
-  display: inline-block;
   font-weight: bold;
   margin: 0;
 }
@@ -115,6 +151,8 @@ h1 {
   text-align: center;
   font-size: 3rem;
   margin: 30px auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .grid {
@@ -171,6 +209,78 @@ h1 {
   .lion {
     grid-column: span 2;
   }
+
+  @media screen and (width <=1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    .ane {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .bateau {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .chateau {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    .monstre {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .pharaon {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    .marin {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    .horloge {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  @media screen and (width <=768px) {
+    grid-template-columns: repeat(2, 1fr);
+    .ane {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+    .bateau {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .city {
+      grid-column: span 2;
+    }
+
+    .monstre {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .horloge {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .dragon {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .lion {
+      grid-column: span 2;
+    }
+  }
+  @media screen and (width <=480px) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 .texte {
@@ -203,13 +313,6 @@ h1 {
 .img:hover img {
   transform: scale(1.03);
   transition: transform 0.5s ease;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .btn {
