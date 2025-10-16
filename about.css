@@ -27,11 +27,11 @@ body {
             text-transform: uppercase;
             letter-spacing: .5em;
             border-width: 4px 0;
-            padding: 8vh 0vh;
+            padding: 6vh 0vh;
             }
 
             h1 span {
-            font: 900 4em/1 "Montserrat", sans-serif;
+            font: 900 3em/1 "Montserrat", sans-serif;
             letter-spacing: 0;
             padding: .25em 0 .325em;
             margin: 0 auto;
@@ -323,18 +323,21 @@ body {
 }
 
 .press-card a {
-  background: white;
+  background: #f2f2f2;
   color: inherit;
   padding: 5px 10px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .press-card a:hover {
   background: rgba(255,255,255,0.9);
-  color: #a4161a;
+  color: #0055BF;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
 
 
@@ -344,14 +347,17 @@ body {
         padding: 20px 40px 0 40px;
         /* Réduction du padding latéral */
 
-
         .abouttitle {
-            padding: 20px 0 60px 0;
+            padding: 20px 0 40px 0;
 
             h1 {
-                font-size: 2.5em;
-                gap: 40px;
-                text-align: center;
+            width: auto;
+            padding: 3em 0;
+            text-align: center;
+            }
+
+            h1 span {
+            font: 900 2em/1 "Montserrat", sans-serif;
             }
 
             .title-icon {
@@ -360,8 +366,9 @@ body {
             }
 
             h2 {
+                width: 100%;
                 font-size: 1.5em;
-                padding: 20px 40px;
+                padding: 20px 20px;
                 text-align: center;
             }
         }
@@ -391,6 +398,13 @@ body {
                     text-align: center;
                 }
             }
+        }
+
+        .aboutPress h2 {
+            width: 100%;
+            font-size: 1.5em;
+            padding: 20px 20px 60px 20px;
+            text-align: center;
         }
 
         .aboutBrick {

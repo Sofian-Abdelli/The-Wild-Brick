@@ -16,7 +16,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
 .mainTitle {
@@ -27,11 +27,11 @@ main {
          text-transform: uppercase;
             letter-spacing: .5em;
             border-width: 4px 0;
-            padding: 8vh 0vh 6vh 0vh;
+            padding: 6vh 0vh 6vh 0vh;
     }
 
     h1 span {
-            font: 900 4em/1 "Montserrat", sans-serif;
+            font: 900 3em/1 "Montserrat", sans-serif;
             letter-spacing: 0;
             padding: .25em 0 .325em;
             margin: 0 auto;
@@ -234,18 +234,22 @@ main {
   }
 
 .contactTitle{
+
     h1{
-        font-size: 2.5em;
-        gap: 40px;
-        width: 80%;
+        width: auto;
         text-align: center;
-        margin: 40px 40px 10px 40px;
+        padding: 1.5em 0;
     }
+
+    h1 span {
+    font: 900 2em/1 "Montserrat", sans-serif;
+    }
+
     p{
         font-size: 1.3rem;
         text-align: center;
-        width: 90%;
-        margin: 30px 40px 40px 20px;
+        width: 100%;
+        margin: 0 20px;
     }
 }
 
