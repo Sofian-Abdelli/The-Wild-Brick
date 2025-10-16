@@ -20,6 +20,7 @@ body.dark-theme {
     --text-color: #ffffff;
     --title-color: #ffffff;
     --shadow-color: rgba(255,255,255,0.1);
+    --cartColor: #393D3F;
 }
 
 body {
@@ -49,6 +50,23 @@ body {
 button:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
+}
+
+/* =============================== BURGER ============================== */
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
 
 /* =============================== NAVBAR ============================== */
@@ -217,6 +235,10 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.empty {
+    text-align: center;
+}
+
 p {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
@@ -235,7 +257,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #d9d9d9;
+    background: var(--cartColor);
     border-radius: 0.625rem;
     padding: 0.625rem 1.250rem;
     height: 15rem;
@@ -398,5 +420,32 @@ main {
     .btnCheckout {
         margin-left: 2vw;
     }
+
+    .burger {
+    display: flex;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f2cf2a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li {
+    text-align: center;
+    margin: 10px 0;
+}
 
 }

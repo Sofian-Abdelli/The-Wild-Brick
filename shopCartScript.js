@@ -16,6 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
 
+//-----------------------BURGER--------------------------------
+
+const burger = document.querySelector('.burger');
+
+const navMenu = document.querySelector('.nav-menu');
+
+burger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+}); 
+
+
+//--------------------cart--------------------------------
     function getCart() {
         return JSON.parse(localStorage.getItem("cart")) || [];
     }
@@ -35,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cart.length === 0) {
             const emptyMsg = document.createElement("p");
             emptyMsg.textContent = "Your cart is empty.";
+            emptyMsg.classList.add("empty");
             main.appendChild(emptyMsg);
             return;
         }
