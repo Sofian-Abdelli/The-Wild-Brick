@@ -83,3 +83,34 @@ const banner = document.getElementById('cookie-banner');
   function disableCookies() {
     console.log('Cookies refusés');
   }
+
+  // Roue de la fortune 
+      const popup = document.getElementById("fortunePopup");
+    const openBtn = document.getElementById("openPopup");
+    const closeBtn = document.getElementById("closePopup");
+    const wheel = document.getElementById("wheel");
+    const spinBtn = document.getElementById("spin");
+    const result = document.getElementById("result");
+
+    const prizes = ["🎁-10% with PROMO10", "1 free LEGO set", "You lost !", "🎉 FREE delivery", "🔥 -20% with PROMO20", "Try again !"];
+
+    openBtn.addEventListener("click", () => {
+      popup.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+      result.textContent = "";
+      wheel.style.transform = "rotate(0deg)";
+    });
+
+    spinBtn.addEventListener("click", () => {
+      const randomDeg = 720 + Math.floor(Math.random() * 360); 
+      wheel.style.transform = `rotate(${randomDeg}deg)`;
+
+
+      setTimeout(() => {
+        const index = Math.floor(Math.random() * prizes.length);
+        result.textContent = `${prizes[index]}`;
+      }, 4000);
+    });
