@@ -199,6 +199,65 @@ main {
   background-color: #1e8449;
 }
 
+.footer {
+    background-color: #f2cf2a;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2cf2a;
+    width: auto;
+}
+
+
+.footer-container {
+    padding: 2em 1.25rem;
+
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    gap: 2em;
+    border: 0.125rem solid #000;
+    border-radius: 1.5625rem;
+    background-color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media li img {
+    width: 2em;
+    height: 2em;
+    transition: transform 0.2s ease;
+    border-radius: 1.5rem;
+}
+
+.social-media li img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 /* Animations */
 
 @keyframes aitf {
