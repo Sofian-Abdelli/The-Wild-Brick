@@ -12,6 +12,7 @@
     --title-color: #000000;
     --shadow-color: rgba(0,0,0,0.1);
 }
+
 /* =============================== DARK THEME ============================== */
 
 body.dark-theme {
@@ -158,7 +159,6 @@ button:hover {
     background: none;
 
 }
-
 /* =============================== TITLE ============================== */
 
 h1 {
@@ -211,8 +211,8 @@ h1 span {
     font: 900 3em/1 "Montserrat", sans-serif;
 }
 
-
 /* =============================== CART ============================== */
+
 .cartCounter {
     position: absolute;
     top: 0.3125rem;
@@ -228,264 +228,120 @@ h1 span {
     justify-content: center;
 }
 
-/*===============================TOP==============================*/
-
-.shopTopImg {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 1rem;
-}
-
-.shopPtop {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 60%;
-    max-width: 80vh;
-    background-color: var(--cartColor);
-    margin: auto;
-    margin-top: 5rem;
-    padding: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-}
-
-
-.shopImgL,
-.shopImgR {
-    width: 30rem;
-    border-radius: 5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
 h2 {
-    margin-top: 6rem;
-    margin-bottom: 3rem;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: "montserrat", sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.empty {
+    text-align: center;
 }
 
 p {
     font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font: bold;
 }
 
-.shopSlider {
-    width: 67%;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 0.3rem;
-    position: relative;
-    overflow: visible;
-    border-radius: 0.3rem;
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem;
+    align-items: center;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--cartColor);
+    border-radius: 0.625rem;
+    padding: 0.625rem 1.250rem;
+    height: 15rem;
+    min-width: 90%;
+}
+
+.cartItem img {
+    width: 15rem;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
     object-fit: contain;
 }
 
-.shopArrow:hover {
-    background-color: #1d68b4;
+.quantityContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
 }
 
-.shopArrow.left {
-    left: -2.5rem;
-}
-
-.shopArrow.right {
-    right: -2.5rem;
-}
-
-.shopArrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #d9d9d9;
-    color: #000000;
+.btnQuantity {
+    background-color: #ffffff;
     border: none;
-    border-radius: 50%;
+    padding: 0.3125rem 0.625rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
     width: 2rem;
     height: 2rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.2s ease;
-    z-index: 10;
 }
 
-.shopSliderTrack {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scroll-snap-align: start;
-    cursor: grab;
-    user-select: none;
+.btnQuantity:hover {
+    border: 0.2rem solid #f2cf2a;
 }
 
-.shopSliderTrack.dragging {
-    cursor: grabbing;
-}
-
-.shopSliderTrack::-webkit-scrollbar {
-    height: 0.5rem;
-}
-
-.shopSliderTrack::-webkit-scrollbar-track {
-    background: #d9d9d9;
-    border-radius: 1rem;
-}
-
-.shopSliderTrack::-webkit-scrollbar-thumb {
-    background: #d9d9d9;
-    border-radius: 1rem;
-    border: 0.1rem solid #000000;
-}
-
-.shopSliderTrack::-webkit-scrollbar-thumb:hover {
-    background: #f2cf2a;
+.btnClearCart {
+    background-color: #d02a1e;
+    color: white;
+    border: none;
+    padding: 0.625rem 1.250rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
-.shopSlide {
-    flex: 0 0 27vh;
-    scroll-snap-align: start;
+.btnClearCart:hover {
+    background-color: #a81e1e;
+}
+
+.btnCheckout {
+  padding: 0.625rem 1.250rem;
+  background-color: #3b983f;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btnCheckout:hover {
+  background-color: #45a049;
+}
+
+.btnCheckout, .btnClearCart {
+    width: 7.5rem;
+    height: 2.5rem;
     padding: 0.25rem;
-    border-radius: 0.3rem;
-    margin: 1rem;
-    max-width: 16.9rem;
-    background-color: var(--cartColor);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+    align-self: center;
+} 
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 1.250rem;
+  margin-bottom: -90vh;
 }
 
-img {
-    background-color: #ffffff;
-}
 
-.shopNameProduct {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 0.40rem;
-    margin-bottom: 0.3rem;
 
-}
-
-.shopPriceProduct {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
-    margin-left: -18vh;
-}
-
-.shopAddToCart {
+main { 
+    margin-bottom: 100vh;
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 21vh;
-    margin-right: 1vh;
-    border-radius: 0.2rem;
-    background-color: #f2cf2a;
-    color: var(--buttonColor);
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-    margin-top: -1rem;
-    width: 4vh;
-    height: 4vh;
-
-    .cart {
-        width: 4vh;
-        height: auto;
-        background-color: var(--buttonColor);
-        border-radius: 0.125rem;
-        border: 0.2rem solid #f2cf2a;
-    }
-}
-
-.shopAddToCart:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
-
-    .cart {
-        width: 4vh;
-        height: auto;
-        background-color: var(--buttonColor);
-        border-radius: 0.125rem;
-        border: 0.2rem solid #3b983f;
-    }
-}
-
-.shopAddToCart:active {
-    transform: scale(0.95);
-}
-
-/*===============================BOTTOM==============================*/
-
-.shopSlide img {
-    width: 100%;
-    height: 30vh;
-    display: block;
-    user-select: none;
-    border-radius: 0.3rem;
-    object-fit: contain;
-}
-
-.shopAllProd {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 2rem;
-    justify-items: center;
-    width: 65%;
-    margin: auto;
-
-}
-
-.shopSlide1 {
-    width: 95%;
-    height: 40vh;
-    flex: 0 0 auto;
-    padding: 0.25rem;
-    border-radius: 0.3rem;
-    margin: 0.2rem;
-    background-color: var(--cartColor);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .shopAddToCart {
-        margin-left: 25vh;
-    }
-}
-
-.shopSlide1 img {
-    width: 100%;
-    height: 28vh;
-    display: block;
-    object-fit: contain;
-    border-radius: 0.3rem;
-    user-select: none;
-}
-
-.shopAll {
-    margin-bottom: 10vh;
-}
-
-.shopReturnTop {
-    text-align: end;
-    margin-right: 5rem;
-    margin-bottom: 2rem;
-    cursor: pointer;
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+    gap: 1rem;
 }
 
 /*===============================FOOTER==============================*/
@@ -549,60 +405,20 @@ img {
         font-size: 1.5rem;
     }
 
-    .shopTopImg {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        margin: 1rem;
-        gap: 2rem;
+    .cartItem {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        gap: 1rem;
+
+        img {
+            width: 100%;
+            height: 15rem;
+        }
     }
 
-    .shopPtop {
-        margin-bottom: 3rem;
-    }
-
-    .shopImgL,
-    .shopImgR {
-        width: 20rem;
-    }
-
-    .shopSlider {
-        width: 90%;
-    }
-
-    .shopSliderTrack::-webkit-scrollbar {
-        height: 0.1rem;
-    }
-
-    .shopArrow {
-        display: none;
-    }
-
-    .shopAddToCart {
-        font-size: 1rem;
-    }
-
-    .shopSlide1 .shopAddToCart {
-        margin-left: 13rem;
-    }
-
-    .shopNameProduct {
-        font-size: 1rem;
-    }
-
-    .shopPriceProduct {
-        font-size: 1rem;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-    }
-
-    .shopAllProd {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .shopSlide {
-        margin: 0.2rem;
+    .btnCheckout {
+        margin-left: 2vw;
     }
 
     .burger {
@@ -631,46 +447,5 @@ img {
     text-align: center;
     margin: 10px 0;
 }
-
-
-}
-
-@media screen and (max-width: 350px) {
-
-    .shopImgL,
-    .shopImgR {
-        width: 35vh;
-    }
-
-    .shopSlide1 .shopAddToCart {
-        margin-left: 20vh;
-    }
-
-    .shopSlider {
-        width: 100%;
-    }
-
-    .shopSlide {
-        margin: 0.2rem;
-    }
-
-    .shopArrow {
-        display: none;
-    }
-
-    .shopAddToCart {
-        margin-top: -1vh;
-        font-size: 1rem;
-    }
-
-    .shopNameProduct {
-        font-size: 1rem;
-    }
-
-    .shopPriceProduct {
-        font-size: 1rem;
-        margin-bottom: 1vh;
-        margin-top: 1vh;
-    }
 
 }
