@@ -571,3 +571,7 @@ a.back:active {
     transform: none;
   }
 } */
+
+footer p {
+  padding-left: 15px;
+}
