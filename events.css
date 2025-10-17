@@ -321,6 +321,23 @@ button:hover {
     transform: scale(1.2);
 }
 
+.copyright {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    padding: 0px 10px 10px 20px;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 992px) {
 body {
     margin : 0;
