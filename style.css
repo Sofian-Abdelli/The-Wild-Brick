@@ -88,7 +88,7 @@ body {
 
 }
 
-.social-media {
+.the-social-media {
     list-style: none;
     display: flex;
     justify-content: left;
@@ -101,18 +101,29 @@ body {
     margin: 0;
 }
 
-.social-media li {
-    display: inline-block;
+.the-social-media li {
+    display: inline;
+    padding: 15px;
 }
 
-.social-media li img {
+.the-social-media li img {
     width: 2em;
     height: 2em;
     transition: transform 0.2s ease;
 }
 
-.social-media li img:hover {
+.the-social-media li img:hover {
     transform: scale(1.2);
+}
+
+footer a {
+    color: #000;
+    /* noir */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 992px) {
