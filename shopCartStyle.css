@@ -353,6 +353,7 @@ main {
     right: 0;
     background-color: #f2cf2a;
     width: auto;
+    padding-bottom: 1rem;
 }
 
 
@@ -386,7 +387,16 @@ main {
 }
 
 .social-media li img:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
+}
+
+#ml {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*===============================RESPONSIVE==============================*/
