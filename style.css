@@ -14,7 +14,7 @@ body {
 
 /* === NAVBAR === */
 .navbar {
-    background-color: #f2cf2a;
+    background-color: #FEDC00;
     padding: 15px 0;
 }
 
@@ -54,7 +54,7 @@ body {
     padding: 8px 20px;
 
     border-radius: 25px;
-    background-color: #f2cf2a;
+    background-color: #FEDC00;
     font-weight: 500;
     transition: background-color 0.3s ease;
     font-family: "Roboto", sans-serif;
