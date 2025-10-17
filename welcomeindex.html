@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The wild brick</title>
+    <title>The Wild Brick - For Lego Lovers </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,8 +13,18 @@
 
     <link rel="stylesheet" href="welcomestyle.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="gallery/events/icon.ico" type="image/x-icon" text="The WildBrick - for Lego lovers">
 </head>
-
+<div id="cookie-banner" class="cookie-banner" aria-hidden="true">
+  <p>
+    Nous utilisons des cookies pour améliorer votre expérience. 
+    <a href="/politique-cookies.html" target="_blank">En savoir plus</a>
+  </p>
+  <div class="actions">
+    <button id="acceptCookies">Accepter</button>
+    <button id="declineCookies">Refuser</button>
+  </div>
+</div>
 <body>
 
     <!--Navbar-->
@@ -40,13 +50,25 @@
 
 
     <img class=banniere src="gallery/banniere thewildbrick.png" alt="banniere lege the wild brick">
-    <div class="slogan"><b>Here, we love legos.</b></div>
+
+
+ <div class="parallax-lego">
+    <img class="lego1" data-rellax-speed="-7.5" data-rellax-percentage="0.6" src="gallery/welcome/lego_rouge1-removebg-preview.png">
+  <img class="lego2" data-rellax-speed="-8" data-rellax-percentage="0.6"    src="gallery/welcome/legoavectoriser-removebg-preview.png">
+   <img class="lego3" data-rellax-speed="-7.6" data-rellax-percentage="0.6"   src="gallery/welcome/legobleu-removebg-preview.png">
+  <img class="lego4" data-rellax-speed="-6.9" data-rellax-percentage="0.6"    src="gallery/welcome/legojaune-removebg-preview.png">
+  <img class="lego5" data-rellax-speed="-9" data-rellax-percentage="0.65"    src="gallery/welcome/legorouge-removebg-preview.png">
+  <img class="lego6" data-rellax-speed="-7.1" data-rellax-percentage="0.6"   src="gallery/welcome/legojaune1-removebg-preview.png">
+</div>
+
+
+    <div class="slogan"><b>we love legos</b></div>
     <section class="homeHeader">
         <video autoplay muted loop class="video">
             <source src="gallery/37053-413229543_tiny.mp4" type="video/mp4">
         </video>
         <div class="textpresentation">
-            <div class="textpres1">
+            <div class="textpres1" data-rellax-speed="2" data-rellax-percentage="0.5" >
                 <p>Whether you're a lifelong builder, a creative mind, or just discovering the joy of bricks, you've
                     found
                     your home.</p>
@@ -55,7 +77,7 @@
                 <p>Join us and rediscover the magic of LEGO through stories, tutorials, and amazing fan creations from
                     around the world.</p>
             </div>
-            <div class="textpres2"><b>
+            <div class="textpres2" data-rellax-speed="1.2" data-rellax-percentage="2"><b>
                     <p>Build.</p>
                     <p>Share.</p>
                     <p>Inspire.</p>
@@ -63,7 +85,7 @@
             </div>
     </section>
     <img class="arrowbottom" src="gallery/arrow-down-circle.svg" alt="icone fleche bas">
-    <div class="center">
+    <div class="center" id="content">
         <div class="wrapper">
             <div class="inner" style="transform: translateX(-0%);">
                 <div class="card">
@@ -81,12 +103,12 @@
                 <div class="card">
                     <img src="gallery/monument.jpg" alt="temple en lego">
                 </div>
-                <div class="card">
-                    <img src="gallery/monument.jpg" alt="temple en lego">
-                </div>
-                <div id="card">
-                    <div class="more-creations">
-                        See more creations
+                <!-- <div class="card"> -->
+                    <!-- <img src="gallery/monument.jpg" alt="temple en lego"> -->
+                <!-- </div> -->
+                <div id="card" class="more-creations">
+                    <div >
+                       <a id="liencreations" href="creations.html"> See more creations</a>
                     </div>
                 </div>
             </div>
@@ -97,10 +119,12 @@
             <button class="third"></button>
         </div>
     </div>
-    <div class="banniereevents" onclick="">
+
+    <img id=photoevents src="gallery/the-art-of-brick-marseille.jpg" alt=" photo expo the art of brick">
+  <div class="banniereevents">
 
         <div class="container">
-            <div class="built-your-imagination">
+            <div class="built-your-imagination" data-rellax-speed="-1.9" data-rellax-percentage="0.9">
                 <p class="build">BUILD</p>
                 <p class="your">YOUR</p>
                 <p class="imagination">IMAGINATION</p>
@@ -109,11 +133,42 @@
                 <p class="discover-up">Discover creations, challenges,</p>
                 <p class="discover-down">and stories from LEGO lovers around the world.</p>
             </div>
-            <div id="button-events">
-                <p>ALL THE EVENTS HERE</p>
-            </div>
-        </div>
+                       <a href="events.html" id="button-events">All the events here !</a>
+                    </div>
     </div>
+
+   <!-- <p class="shopsentence" data-rellax-speed="2" data-rellax-percentage="1"><b>SHOP</b></p>
+   <section class="shop">
+ <img id=heihei src="gallery/43272_Prod_en-gb.png" alt= heihei en lego>
+        <a href="shopIndex.html" class="buttonshop">Shop here !</a>
+        </section> -->
+       <section class="shop">
+  <p class="shopsentence" data-rellax-speed="2" data-rellax-percentage="0.4"><b>SHOP</b></p>
+
+  <img id="gizmo" src="gallery/shop/theLatestProducts/shopGizmo2.png" alt="LEGO set image" />
+
+  <p class="shoptext">
+    Discover our exclusive LEGO® kits, creative sets for builders of all ages.<br>
+    Click below to explore the full collection !
+  </p>
+
+  <a href="shopIndex.html" class="buttonshop">Shop here !</a>
+</section>
+
+<section class="rouedelafortune">
+     <button id="openPopup">🎡Wheel of Fortune🎡</button>
+
+  <div class="popup" id="fortunePopup">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>Try your luck</h2>
+      <div class="pointer">&#x25BC;</div>
+      <div class="wheel" id="wheel"></div>
+      <button id="spin">Spin the wheel</button>
+      <p id="result"></p>
+    </div>
+  </div>
+</section>
 
     <footer class="footer">
         <div class="footer-container">
@@ -140,10 +195,13 @@
                 </li>
             </ul>
         </div>
+        <p>&copy; 2025 The Wild Brick
+            <a href="ml.html" target="_blank">Mentions légales</a>
+
         <!-- Ici se trouve les icônes-->
     </footer>
 
-
+<script src="moduleJS/rellax.min.js"></script>
     <script src="welcomescript.js"></script>
 </body>
 
